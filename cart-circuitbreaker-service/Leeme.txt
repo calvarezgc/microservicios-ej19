@@ -1,0 +1,13 @@
+========
+Pruebas
+========
+Parar el microservicio 19c (Catalogo)
+
+Para obtener los carritos de prueba
+	(GET) localhost:8889/cart/   >>> Deberia funcionar sin problemas xq tira de la BBDD
+
+Para incluir nuevos elementos
+	(POST) localhost:8889/cart/1/add?idProduct=1		>>> Deberia fallar pero da un mensaje personalizado
+	(POST) localhost:8889/cart/1/add?idProduct=2&qt=4	>>> Deberia fallar pero da un mensaje personalizado
+	
+	En el 19d da un fallo si el micro 19c esta parado

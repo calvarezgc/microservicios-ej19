@@ -1,0 +1,10 @@
+========
+Pruebas
+========
+
+	(GET) http://localhost:7777/product/
+	(GET) http://localhost:7777/product/{id}
+	
+Está realizado con una BBDD HSQLSB (parecida a H2)
+	Cargar dependencia en el pom.xml
+	Incluir fichero data.sql en /resources 	

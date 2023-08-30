@@ -1,0 +1,23 @@
+=================
+ADMIN-SERVER
+=================
+Vamos a añadir un entorno gráfico (dashboard) de información
+
+
+============
+DEPENDENCIAS
+============
+spring-boot-admin-starter-server
+
+
+==============
+FUNCIONAMIENTO
+==============
+
+debo dar de alta en cada microservcio para que lo reconozca (añado el cliente)
+Añadir en Controller la anotacion
+
+========
+Pruebas
+========
+localhost:8085

@@ -1,0 +1,73 @@
+============
+Dependencias
+============
+
+	spring-cloud-config-server
+	
+En este ejemplo
+# CONFIGURACION FINAL. La suma de
+#   configuracion GIT global: application.properties
+#   configuracion GIT microservicio: 
+#            cart.properties
+#            catalog.properties
+#   configuracion microservicio: este archivo	
+		
+========
+Pruebas
+========
+
+1) Definir un GIT y configurar en application.properties
+	  Incluir los ficheros que figuran más abajo
+
+2) Lanzar	
+		http://localhost:2222/catalog/default
+		http://localhost:2222/cart/default
+		http://localhost:2222/catalog/production	
+		
+		
+		
+==========================
+Ficheros para este ejemplo
+==========================
+
+---------------------
+aplication.properties
+---------------------
+# CONFIGURACION GLOBAL
+
+# INFO DE LA BBDD
+# Mostrar info JPA
+spring.jpa.show-sql=true
+# Esto permite retrasar la inicialización de la BBDD hasta que exista
+spring.jpa.defer-datasource-initialization=true
+
+# Discovery Server Access (Servidor EUREKA)
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+
+# Si se indica a false no funciona DevTools. TRUE por defecto
+spring.devtools.restart.enabled=true
+
+#Permite conocer los endpoints
+logging.level.org.springframework.web.servlet.mvc.method.annotation=TRACE
+
+
+---------------
+cart.properties
+---------------
+# Estos son los datos exclusivos para el microservicio CART
+# El resto se encuentra en application.properties
+server.port=8888
+    
+------------------
+catalog.properties
+------------------
+# Estos son los datos exclusivos para el microservicio CATALOG
+# El resto se encuentra en application.properties
+server.port=7777    
+    
+-----------------------------
+catalog-production.properties
+-----------------------------
+# DATOS PARA PRODUCCION
+saludo= DATOS DE PRODUCCION
+		

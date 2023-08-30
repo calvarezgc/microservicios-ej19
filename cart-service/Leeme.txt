@@ -1,0 +1,11 @@
+========
+Pruebas
+========
+
+Para obtener los carritos de prueba
+	(GET) localhost:8888/cart/
+	(GET) localhost:8888/cart/1
+
+Para incluir nuevos elementos
+	(POST) localhost:8888/cart/1/add?idProduct=1
+	(POST) localhost:8888/cart/1/add?idProduct=2&qt=4
